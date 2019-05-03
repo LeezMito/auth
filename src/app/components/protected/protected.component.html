@@ -1,3 +1,16 @@
-<p>
-  protected works!
-</p>
+<div class="row">
+  <div class="col-md-4" *ngIf="profile">
+    <img [src]="profile.picture" class="img-fluid" alt="">
+  </div>
+  <div class="col-md-8">
+    <ul class="list-group">
+      <li class="list-group-item">{{profile.name}}</li>
+      <li class="list-group-item">{{profile.nickname}}</li>
+      <li class="list-group-item">{{profile.email}}</li>
+    </ul>
+  </div>
+</div>
+
+<pre>
+ {{ profile | json }}
+</pre>
